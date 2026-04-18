@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASO — Enterprise Engineering</title>
+    <meta name="description" content="Diseñamos sistemas que generan dinero. Obras maestras de ingeniería empresarial.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- GSAP / Lenis CDNs are loaded at the bottom -->
+</head>
+<body class="dark-theme">
+
+    <!-- 9. NAVBAR -->
+    <nav id="navbar" class="saso-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">SASO</a>
+            <div class="nav-links">
+                <a href="#system">Sistema</a>
+                <a href="#process-pin">Proceso</a>
+                <a href="#results">Resultados</a>
+                <a href="#cta" class="nav-apply">Aplicar</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- 1. HERO SECTION -->
+            <section id="hero" class="hero-section">
+                <div class="hero-bg">
+                    <div class="hero-img-wrapper">
+                        <img src="assets/images/saso_hero_art_v3.png" alt="Hero Background">
+                    </div>
+                    <div class="noise-overlay"></div>
+                </div>
+                <div class="hero-content">
+                    <p class="hero-subtitle">NO CONSTRUIMOS EMPRESAS</p>
+                    <h1 class="hero-title glitch" data-text="Diseñamos sistemas que generan dinero">Diseñamos sistemas<br>que generan dinero</h1>
+                    <p class="hero-branding">SASO — Enterprise Engineering</p>
+                </div>
+            </section>
+
+            <!-- 2.5 WHAT WE DO SECTION (POWER ARCHITECTURE) -->
+            <section id="what-we-do" class="wwd-section content-container">
+                <div class="wwd-power-intro">
+                    <div class="wwd-header-left">
+                        <div class="wwd-bg-text">POWER SYSTEM</div>
+                        <h2 class="wwd-headline">No ofrecemos servicios.<br>Construimos empresas.</h2>
+                        <div class="wwd-status-tags">
+                            <span class="tag-label">[ SYSTEM STATUS: DEPLOYED ]</span>
+                            <span class="tag-label">[ AUTHORITY: TOTAL ]</span>
+                        </div>
+                    </div>
+                    <div class="wwd-header-right">
+                        <div class="power-manifesto">
+                            <h3 class="manifesto-title">INFRAESTRUCTURA DE <span class="highlight-yellow">DOMINIO CAPITAL.</span></h3>
+                            <p class="manifesto-lead">No operamos bajo el azar del mercado. Operamos bajo arquitectura sistémica de <span class="highlight-pink">alta precisión.</span></p>
+                            <p class="manifesto-detail">Cada nodo desplegado por SASO es un sistema de ingeniería diseñado para la captura de <span class="highlight-blue">valor</span> y el escalado de <span class="highlight-red">poder</span> corporativo inminente. Si el sistema no produce dinero, el sistema no existe.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wwd-grid">
+                    <!-- 01: Creación -->
+                    <a href="creacion-empresa.html" class="wwd-block" id="wwd-01" style="--accent: var(--yellow);">
+                        <div class="t-header">
+                            <span class="t-dot r"></span>
+                            <span class="t-dot y"></span>
+                            <span class="t-dot g"></span>
+                        </div>
+                        <div class="t-body">
+                            <span class="wwd-num">01</span>
+                            <div class="t-image">
+                                <img src="assets/images/service-01.png" alt="Foundation">
+                            </div>
+                            <h3 class="wwd-title">Creación de Empresa</h3>
+                            <p class="wwd-desc">Constitución legal, branding, web, ecommerce, automatización.</p>
+                            <div class="t-visual">
+                                <span>STATUS: ACTIVE</span>
+                                <span>0xFD2026</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 02: Arquitectura -->
+                    <a href="arquitectura-negocio.html" class="wwd-block" id="wwd-02" style="--accent: var(--pink);">
+                        <div class="t-header">
+                            <span class="t-dot r"></span>
+                            <span class="t-dot y"></span>
+                            <span class="t-dot g"></span>
+                        </div>
+                        <div class="t-body">
+                            <span class="wwd-num">02</span>
+                            <div class="t-image">
+                                <img src="assets/images/service-02.png" alt="Architecture">
+                            </div>
+                            <h3 class="wwd-title">Arquitectura de Negocio</h3>
+                            <p class="wwd-desc">Operaciones, estructura interna, sistemas de gestión inteligente.</p>
+                            <div class="t-visual">
+                                <span>CORE: STABLE</span>
+                                <span>SYS.ARCH_OVR</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 03: Ingeniería Fiscal -->
+                    <a href="ingenieria-fiscal.html" class="wwd-block" id="wwd-03" style="--accent: var(--blue);">
+                        <div class="t-header">
+                            <span class="t-dot r"></span>
+                            <span class="t-dot y"></span>
+                            <span class="t-dot g"></span>
+                        </div>
+                        <div class="t-body">
+                            <span class="wwd-num">03</span>
+                            <div class="t-image">
+                                <img src="assets/images/service-03.png" alt="Fiscal">
+                            </div>
+                            <h3 class="wwd-title">Ingeniería Fiscal</h3>
+                            <p class="wwd-desc">Estrategia fiscal, eficiencia financiera, optimización tributaria.</p>
+                            <div class="t-visual">
+                                <span>TAX_CAP: OK</span>
+                                <span>VAL_8.420</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 04: Crecimiento -->
+                    <a href="crecimiento-marketing.html" class="wwd-block" id="wwd-04" style="--accent: var(--neon-green);">
+                        <div class="t-header">
+                            <span class="t-dot r"></span>
+                            <span class="t-dot y"></span>
+                            <span class="t-dot g"></span>
+                        </div>
+                        <div class="t-body">
+                            <span class="wwd-num">04</span>
+                            <div class="t-image">
+                                <img src="assets/images/service-04.png" alt="Growth">
+                            </div>
+                            <h3 class="wwd-title">Crecimiento & Marketing</h3>
+                            <p class="wwd-desc">Adquisición masiva, campañas, escalado de audiencia y ventas.</p>
+                            <div class="t-visual">
+                                <span>TRAFFIC: HIGH</span>
+                                <span>SCALE_MAX.202</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 05: Producción -->
+                    <a href="produccion-percepcion.html" class="wwd-block" id="wwd-05" style="--accent: var(--red);">
+                        <div class="t-header">
+                            <span class="t-dot r"></span>
+                            <span class="t-dot y"></span>
+                            <span class="t-dot g"></span>
+                        </div>
+                        <div class="t-body">
+                            <span class="wwd-num">05</span>
+                            <div class="t-image">
+                                <img src="assets/images/service-05.png" alt="Perception">
+                            </div>
+                            <h3 class="wwd-title">Producción & Percepción</h3>
+                            <p class="wwd-desc">Contenido, comerciales, identidad de marca editorial.</p>
+                            <div class="t-visual">
+                                <span>IMG_ENGINE: ON</span>
+                                <span>FPS_60.SYS</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 06: Innovación -->
+                    <a href="innovacion.html" class="wwd-block" id="wwd-06" style="--accent: var(--white);">
+                        <div class="t-header">
+                            <span class="t-dot r"></span>
+                            <span class="t-dot y"></span>
+                            <span class="t-dot g"></span>
+                        </div>
+                        <div class="t-body">
+                            <span class="wwd-num">06</span>
+                            <div class="t-image">
+                                <img src="assets/images/service-06.png" alt="Innovation">
+                            </div>
+                            <h3 class="wwd-title">Innovación</h3>
+                            <p class="wwd-desc">Criptomonedas, ecosistemas digitales, estrategia futura.</p>
+                            <div class="t-visual">
+                                <span>BLOCKCHAIN: SYNC</span>
+                                <span>H_XF_AA2</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 2.7 WHY SASO SECTION (INFRASTRUCTURE) -->
+            <section id="why-saso" class="why-saso-section content-container">
+                <div class="why-saso-wrapper">
+                    <div class="why-saso-content">
+                        <p class="section-label">INFRAESTRUCTURA</p>
+                        <h2 class="why-h2">No <span class="highlight-pink">somos</span> una <span class="highlight-neon">agencia.</span><br><span class="highlight-pink">Somos</span> <span class="highlight-yellow">infraestructura.</span></h2>
+                        <div class="why-body">
+                            <p>SASO no nace de marketing.<br>Nace de estructura.</p>
+                            <p>No diseñamos campañas aisladas.<br>Diseñamos sistemas que operan empresas completas.</p>
+                            <p>Desde la constitución legal hasta la generación constante de ingresos.</p>
+                            <p>Cada decisión tiene una función.<br>Cada sistema tiene un objetivo: <span class="highlight-neon">producir dinero.</span></p>
+                        </div>
+                        <p class="why-closing">NO <span class="highlight-pink">TRABAJAMOS</span> CON TODOS.<br>SOLO CON <span class="highlight-yellow">EMPRESAS</span> QUE QUIEREN <span class="highlight-blue">ESCALAR</span> EN SERIO.</p>
+                    </div>
+
+                    <div class="why-saso-visual">
+                        <div class="system-container">
+                            <svg class="rotating-system" viewBox="0 0 400 400">
+                                <circle cx="200" cy="200" r="120" class="main-circle" />
+                                <circle cx="200" cy="200" r="160" class="outer-circle" />
+                                <line x1="200" y1="80" x2="200" y2="40" class="node-line" />
+                                <line x1="200" y1="320" x2="200" y2="360" class="node-line" />
+                                <line x1="303.9" y1="140" x2="338.5" y2="120" class="node-line" />
+                                <line x1="96.1" y1="260" x2="61.5" y2="280" class="node-line" />
+                                <line x1="303.9" y1="260" x2="338.5" y2="280" class="node-line" />
+                                <line x1="96.1" y1="140" x2="61.5" y2="120" class="node-line" />
+                            </svg>
+                            <div class="system-labels">
+                                <span class="s-label l-1">Estructura</span>
+                                <span class="s-label l-2">Sistema</span>
+                                <span class="s-label l-3">Capital</span>
+                                <span class="s-label l-4">Crecimiento</span>
+                                <span class="s-label l-5">Percepción</span>
+                                <span class="s-label l-6">Innovación</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. MANIFESTO SECTION -->
+            <section id="manifesto" class="manifesto-section">
+                <div class="manifesto-strip yellow">
+                    <h2>La mayoría sobrevive.<br><span class="pop-accent">Nosotros escalamos.</span></h2>
+                </div>
+                <div class="manifesto-strip white">
+                    <h2>No vendemos servicios.</h2>
+                </div>
+                <div class="manifesto-strip red">
+                    <h2>Construimos <span class="pop-accent">estructuras.</span></h2>
+                </div>
+                <div class="manifesto-strip black">
+                    <h2>El negocio <span class="highlight-neon">es</span> el arte.</h2>
+                </div>
+            </section>
+
+            <!-- 3. SYSTEM SECTION -->
+            <section id="system" class="system-section content-container">
+                <div class="system-grid">
+                    <!-- LEFT: Pop Art editorial panel -->
+                    <div class="system-left">
+                        <span class="system-label">SISTEMA</span>
+                        <h2 class="system-headline">Inteligencia<br><span class="highlight-neon">operativa.</span></h2>
+                        <p class="system-desc">Cada nodo es un pilar activo de tu empresa. Haz clic para explorar cada área.</p>
+                        <ul class="system-legend">
+                            <li class="legend-item" data-href="sistema-fundacion.html"><span class="legend-dot dot-default"></span>Fundación</li>
+                            <li class="legend-item" data-href="sistema-sistema.html"><span class="legend-dot dot-default"></span>Sistema</li>
+                            <li class="legend-item" data-href="sistema-capital.html"><span class="legend-dot dot-red"></span>Capital</li>
+                            <li class="legend-item" data-href="sistema-expansion.html"><span class="legend-dot dot-default"></span>Expansión</li>
+                            <li class="legend-item" data-href="sistema-percepcion.html"><span class="legend-dot dot-default"></span>Percepción</li>
+                            <li class="legend-item" data-href="sistema-innovacion.html"><span class="legend-dot dot-default"></span>Innovación</li>
+                        </ul>
+                    </div>
+
+                    <!-- RIGHT: Network image with interactive nodes -->
+                    <div class="system-visual">
+                        <img src="assets/images/saso_system_art_v2.png" alt="System Intelligence">
+                        <div class="network-overlay">
+                            <div class="node node-1" data-label="Fundación" data-href="sistema-fundacion.html"></div>
+                            <div class="node node-2" data-label="Sistema" data-href="sistema-sistema.html"></div>
+                            <div class="node node-3" data-label="Capital" data-href="sistema-capital.html"></div>
+                            <div class="node node-4" data-label="Expansión" data-href="sistema-expansion.html"></div>
+                            <div class="node node-5" data-label="Percepción" data-href="sistema-percepcion.html"></div>
+                            <div class="node node-6" data-label="Innovación" data-href="sistema-innovacion.html"></div>
+                            <svg class="network-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <line x1="20" y1="20" x2="50" y2="50" />
+                                <line x1="80" y1="30" x2="50" y2="50" />
+                                <line x1="30" y1="80" x2="50" y2="50" />
+                                <line x1="70" y1="70" x2="50" y2="50" />
+                                <line x1="50" y1="50" x2="80" y2="80" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. PROCESS / STRATEGY SECTION -->
+            <section id="process-pin" class="process-section">
+                <div class="process-bg"></div>
+                <div class="horizontal-scroll-container">
+                    <div class="horizontal-track">
+                        <div class="step-card">
+                            <div class="step-num">01</div>
+                            <h3 class="step-title">Diseño</h3>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-num">02</div>
+                            <h3 class="step-title">Estructura</h3>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-num">03</div>
+                            <h3 class="step-title">Implementación</h3>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-num">04</div>
+                            <h3 class="step-title">Escalamiento</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. RESULTS SECTION (POWER ENGINE REDESIGN) -->
+            <section id="results" class="results-section power-engine">
+                <div class="engine-container">
+                    <!-- Visual System Layers -->
+                    <div class="engine-visual">
+                        <div class="expand-layer pulse-1"></div>
+                        <div class="expand-layer pulse-2"></div>
+                        <div class="expand-layer pulse-3"></div>
+                        <div class="vector-field">
+                            <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+                                <g class="vector-group">
+                                    <line x1="500" y1="500" x2="500" y2="0" class="v-line" />
+                                    <line x1="500" y1="500" x2="1000" y2="500" class="v-line" />
+                                    <line x1="500" y1="500" x2="500" y2="1000" class="v-line" />
+                                    <line x1="500" y1="500" x2="0" y2="500" class="v-line" />
+                                    <line x1="500" y1="500" x2="1000" y2="0" class="v-line" />
+                                    <line x1="500" y1="500" x2="1000" y2="1000" class="v-line" />
+                                    <line x1="500" y1="500" x2="0" y2="1000" class="v-line" />
+                                    <line x1="500" y1="500" x2="0" y2="0" class="v-line" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Manifesto Content -->
+                    <div class="engine-content">
+                        <div class="manifesto-group">
+                            <p class="m-line">El crecimiento no se persigue.</p>
+                            <h2 class="m-action highlight-neon">Se diseña.</h2>
+                        </div>
+                        <div class="manifesto-group">
+                            <p class="m-line">El dinero no se intenta.</p>
+                            <h2 class="m-action highlight-yellow">Se produce.</h2>
+                        </div>
+                    </div>
+
+                    <!-- Metadata aesthetic -->
+                    <div class="engine-metadata">
+                        <span>SYSTEM: [POWER_ENGINE_01]</span>
+                        <span>MOD: GROWTH_SYNC</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. VISUAL IDENTITY / EDITORIAL SECTION (ARTE Y CAPITAL) -->
+            <section id="editorial" class="editorial-section content-container">
+                <div class="editorial-metadata">
+                    <span><span class="tab">ISSUE</span> NO. 07 / SASO // BRAND ENGINEERING</span>
+                    <span>REF: BRND-992-P</span>
+                </div>
+                <div class="editorial-bg-words">
+                    <span class="bg-word w-1">SYSTEM</span>
+                    <span class="bg-word w-2">CONTROL</span>
+                    <span class="bg-word w-3">SCALE</span>
+                </div>
+                <div class="collage-container">
+                    <div class="collage-item item-1">
+                        <img src="assets/images/saso_editorial_pop_v2.png" alt="Pop Art Identity">
+                    </div>
+                    <div class="collage-item item-2">
+                        <img src="assets/images/saso_editorial_portrait_v2.png" alt="Portrait Identity">
+                    </div>
+                        <div class="editorial-info terminal-window simulation-terminal">
+                            <div class="window-header">
+                                <span class="win-dot dot-red"></span>
+                                <span class="win-dot dot-yellow"></span>
+                                <span class="win-dot dot-green"></span>
+                                <span class="window-title">identity_v2.exe</span>
+                            </div>
+                            <div class="window-body">
+                                <h2 class="terminal-title glitch-text" data-text="ARTE Y CAPITAL">ARTE Y CAPITAL</h2>
+                                <p>La estética no es un lujo, es una herramienta de poder corporativo. Diseñamos identidades que dominan la percepción para asegurar el flujo de capital inminente.</p>
+                                <div class="terminal-footer">
+                                    <span class="status-tag">STATUS: OPERATIONAL</span>
+                                    <span class="compiler-note">v.2026.04</span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+            <!-- 6. SYSTEM DOMINANCE (PERCEPTION) (SYSTEMS CREATE POWER) -->
+            <section id="perception-dominance" class="perception-section">
+                <div class="power-svg-container">
+                    <svg id="power-system-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+                        <defs>
+                            <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g class="power-lines"></g>
+                        <g class="power-nodes"></g>
+                        <circle class="power-core" cx="500" cy="500" r="15" filter="url(#subtle-glow)" />
+                    </svg>
+                </div>
+                <div class="power-content">
+                    <h2 class="power-title glitch-text" data-text="SYSTEMS CREATE POWER">SYSTEMS CREATE POWER</h2>
+                </div>
+            </section>
+
+            <!-- 8. CTA SECTION & 9. APPLICATION FORM -->
+            <section id="cta" class="cta-section content-container">
+                <div class="cta-intro">
+                    <h2>No trabajamos con todos.</h2>
+                    <p class="cta-subtitle">Si estás listo para operar como grande… aplica.</p>
+                    <button id="start-app-btn" class="saso-btn primary-btn mt-large">APLICAR PARA CONSTRUIR TU EMPRESA</button>
+                </div>
+
+                <!-- App Form Modal/Drawer -->
+                <div id="application-flow" class="application-container hidden">
+                    <div class="form-wrapper">
+                        <div class="form-header">
+                            <div class="progress-bar"><div class="progress-fill"></div></div>
+                            <button id="close-app-btn" class="close-btn">&times;</button>
+                        </div>
+                        
+                        <div class="form-steps-container">
+                            <div class="form-step active" data-step="1">
+                                <h3>Etapa del negocio</h3>
+                                <div class="options-grid">
+                                    <button class="opt-btn">Idea / Desarrollo</button>
+                                    <button class="opt-btn">Lanzamiento</button>
+                                    <button class="opt-btn">Operando (menos de $10,000 USD / mes)</button>
+                                    <button class="opt-btn">Escalando (más de $10,000 USD / mes)</button>
+                                </div>
+                            </div>
+
+                            <div class="form-step" data-step="2">
+                                <h3>Ingresos actuales (mensuales)</h3>
+                                <div class="options-grid split-col">
+                                    <button class="opt-btn">$0 – $5,000 USD / mes</button>
+                                    <button class="opt-btn">$5,000 – $20,000 USD / mes</button>
+                                    <button class="opt-btn">$20,000 – $50,000 USD / mes</button>
+                                    <button class="opt-btn">Más de $50,000 USD / mes</button>
+                                </div>
+                            </div>
+
+                            <div class="form-step" data-step="3">
+                                <h3>¿Qué quieres construir?</h3>
+                                <textarea placeholder="Describe el objetivo de tu empresa, qué quieres lograr y hacia dónde buscas escalar." rows="3" id="q-build"></textarea>
+                                <button class="saso-btn next-btn" disabled>Continuar</button>
+                            </div>
+
+                            <div class="form-step" data-step="4">
+                                <h3>Principal problema</h3>
+                                <textarea placeholder="¿Qué está frenando tu crecimiento actualmente?" rows="3" id="q-problem"></textarea>
+                                <button class="saso-btn next-btn" disabled>Continuar</button>
+                            </div>
+
+                            <div class="form-step" data-step="5">
+                                <h3>Capacidad de inversión</h3>
+                                <div class="options-grid split-col">
+                                    <button class="opt-btn">$1,000 – $3,000 USD</button>
+                                    <button class="opt-btn">$3,000 – $10,000 USD</button>
+                                    <button class="opt-btn">Más de $10,000 USD</button>
+                                </div>
+                            </div>
+
+                            <div class="form-step" data-step="6">
+                                <h3>Datos de contacto</h3>
+                                <div class="options-grid">
+                                    <input type="text" placeholder="Nombre o nombre de la empresa" required>
+                                    <input type="tel" placeholder="Número de contacto" required>
+                                    <input type="email" placeholder="Correo electrónico" required>
+                                    <textarea placeholder="Agrega cualquier información relevante sobre tu empresa o proyecto" rows="2"></textarea>
+                                </div>
+                                <button class="saso-btn next-btn mt-large" disabled>Continuar</button>
+                            </div>
+
+                            <div class="form-step end" data-step="7">
+                                <h3 class="success-msg highlight-neon">Si tu perfil es seleccionado, te contactaremos.</h3>
+                                <p>Diseñamos sistemas. No trabajamos con todos.</p>
+                                <button id="finish-btn" class="saso-btn mt-large">CERRAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- /smooth-content -->
+        
+        <!-- 10. FOOTER -->
+        <footer class="saso-footer content-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SASO</h3>
+                    <p>Enterprise Engineering</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Qué hacemos</h4>
+                    <a href="#manifesto">Manifiesto</a>
+                    <a href="#system">Estructura</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <a href="#process-pin">Proceso</a>
+                    <a href="#results">Resultados</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="#editorial">Arte y Capital</a>
+                    <a href="#cta">Contacto</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SASO Enterprise Engineering. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    </div> <!-- /smooth-wrapper -->
+
+    <!-- Scripts -->
+    <!-- Lenis for smooth scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

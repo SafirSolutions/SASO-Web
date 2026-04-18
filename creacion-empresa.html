@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Empresa — SASO Engineering</title>
+    <meta name="description" content="Ingeniería de marca y estructura legal para empresas de alto nivel. SASO.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        :root { --accent: var(--yellow); }
+        .service-image-container { box-shadow: 20px 20px 0px var(--accent); }
+    </style>
+</head>
+<body class="dark-theme">
+    <nav class="saso-nav scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">SASO</a>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#what-we-do">Servicios</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <header class="service-hero">
+                <div class="hero-content">
+                    <a href="index.html#what-we-do" class="back-link">← Volver</a>
+                    <h1 class="glitch-text" data-text="Creación de Empresa">Creación de Empresa</h1>
+                    <p class="hero-subtitle">FUNDACIÓN TÁCTICA</p>
+                </div>
+            </header>
+
+            <section class="service-content">
+                <div class="service-image-container glitch-hover">
+                    <div class="frame-header">
+                        <span><span class="tab">ISSUE</span> NO. 01 / SASO // ARCHIVE</span>
+                        <span>REF: FD-2026-XQ</span>
+                    </div>
+                    <div class="service-image-wrapper">
+                        <img src="assets/images/service-01.png" alt="Foundation Engineering">
+                    </div>
+                    <div class="frame-footer">
+                        <span>LAT: 40.7128° N | LON: 74.0060° W</span>
+                        <span>STATUS: STABILIZED</span>
+                    </div>
+                </div>
+                
+                <h2 class="wwd-headline">Construimos la base invisible del éxito.</h2>
+
+                <div class="wwd-core">
+                    <p>No se trata solo de registrar un nombre. Es ingeniería de identidad. Diseñamos estructuras legales que blindan tu patrimonio y branding que domina la percepción desde el día cero.</p>
+                </div>
+
+                <div class="wwd-grid">
+                    <div class="wwd-block" style="opacity: 1;">
+                        <div class="t-header"><span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span></div>
+                        <div class="t-body">
+                            <span class="wwd-num">0.1</span>
+                            <h3 class="wwd-title">Estructura Legal</h3>
+                            <p class="wwd-desc">Constitución estratégica, protección de activos y blindaje operativo.</p>
+                            <div class="t-visual"><span>STATUS: SECURED</span><span>LEG_01</span></div>
+                        </div>
+                    </div>
+                    <div class="wwd-block" style="opacity: 1;">
+                        <div class="t-header"><span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span></div>
+                        <div class="t-body">
+                            <span class="wwd-num">0.2</span>
+                            <h3 class="wwd-title">Identidad Visual</h3>
+                            <p class="wwd-desc">Branding de alto impacto diseñado para proyectar autoridad corporativa.</p>
+                            <div class="t-visual"><span>RENDER: OK</span><span>IMG_02</span></div>
+                        </div>
+                    </div>
+                    <div class="wwd-block" style="opacity: 1;">
+                        <div class="t-header"><span class="t-dot r"></span><span class="t-dot y"></span><span class="t-dot g"></span></div>
+                        <div class="t-body">
+                            <span class="wwd-num">0.3</span>
+                            <h3 class="wwd-title">Ecosistema Web</h3>
+                            <p class="wwd-desc">Despliegue de infraestructuras digitales para ventas y automatización.</p>
+                            <div class="t-visual"><span>PROTO: HTTPS</span><span>WEB_03</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="saso-footer content-container">
+                <p>&copy; 2026 SASO Enterprise Engineering.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+    </script>
+</body>
+</html>
