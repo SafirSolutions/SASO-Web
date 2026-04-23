@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // --- 2.5. WHAT WE DO SECTION ---
     if (document.querySelector('#what-we-do')) {
-        gsap.from(".wwd-header, .wwd-core", {
+        gsap.from(".wwd-header-left, .wwd-header-right, .wwd-core", {
             scrollTrigger: { trigger: "#what-we-do", start: "top 80%" },
             y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power3.out"
         });
@@ -225,12 +225,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     }
 
-    // --- 5. RESULTS COUNTERS ---
-    const resultItems = document.querySelectorAll('.result-item');
-    if (resultItems.length > 0 && document.querySelector('.results-section')) {
-        gsap.from(resultItems, {
-            scrollTrigger: { trigger: ".results-section", start: "top 70%" },
-            y: 50, opacity: 0, duration: 0.8, stagger: 0.2, ease: "power3.out"
+    // --- 5. RESULTS ANIMATIONS (RESTORING SECTION 5 INTEGRITY) ---
+    if (document.querySelector('.results-section.power-engine')) {
+        gsap.from(".m-line, .m-action", {
+            scrollTrigger: { trigger: ".results-section", start: "top 60%" },
+            y: 50, opacity: 0, duration: 1, stagger: 0.2, ease: "power4.out"
+        });
+        
+        // Vector field initialization
+        gsap.from(".v-line", {
+            scrollTrigger: { trigger: ".results-section", start: "top 50%" },
+            strokeDashoffset: 400,
+            opacity: 0,
+            duration: 2,
+            stagger: 0.05,
+            ease: "power2.out"
         });
     }
 
