@@ -2570,7 +2570,7 @@ textarea:focus, input:focus {
         padding: 5rem 6vw;
     }
 
-    h1, h2, h3, h4, h5, h6, .hero-title, .wwd-headline, .service-title, .glitch {
+    h1, h2, h3, h4, h5, h6, .hero-title, .wwd-headline, .service-title, .glitch, .manifesto-title {
         white-space: normal !important;
         word-wrap: normal !important;
         overflow-wrap: normal !important;
@@ -2578,7 +2578,18 @@ textarea:focus, input:focus {
     }
     h1, .hero-title, .service-title { font-size: clamp(1.4rem, 8vw, 2.5rem) !important; line-height: 1.1 !important; }
     h2, .wwd-headline { font-size: clamp(1.2rem, 7vw, 2.2rem) !important; line-height: 1.2 !important; }
-    p { font-size: 0.9rem !important; }
+    h3, .manifesto-title { font-size: clamp(1.1rem, 6vw, 1.6rem) !important; line-height: 1.2 !important; }
+    p, .manifesto-lead, .manifesto-detail { font-size: 0.85rem !important; line-height: 1.4 !important; white-space: normal !important; }
+
+    /* Layout Containment */
+    .wwd-power-intro, .wwd-header-right, .power-manifesto {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        box-sizing: border-box !important;
+        overflow-wrap: break-word !important;
+    }
 
     /* Layout Stacking */
     .wwd-grid, .footer-grid, .console-grid, .results-grid {
