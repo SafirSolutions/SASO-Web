@@ -2571,13 +2571,13 @@ textarea:focus, input:focus {
     }
 
     h1, h2, h3, h4, h5, h6, .hero-title, .wwd-headline, .service-title, .glitch {
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
         white-space: normal !important;
-        hyphens: auto;
+        word-wrap: normal !important;
+        overflow-wrap: normal !important;
+        hyphens: none !important;
     }
-    h1 { font-size: clamp(2.2rem, 10vw, 4rem); line-height: 1.0; }
-    h2 { font-size: clamp(1.8rem, 8vw, 3rem); line-height: 1.1; }
+    h1, .hero-title, .service-title { font-size: clamp(1.8rem, 9vw, 3.5rem) !important; line-height: 1.1 !important; }
+    h2, .wwd-headline { font-size: clamp(1.5rem, 8vw, 3rem) !important; line-height: 1.2 !important; }
     p { font-size: 1rem; }
 
     /* Layout Stacking */
