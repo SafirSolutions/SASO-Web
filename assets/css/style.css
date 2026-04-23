@@ -2200,10 +2200,15 @@ textarea:focus, input:focus {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
-    z-index: -1;
-    opacity: 0.25 !important; /* Strictly enforced 25% opacity as per system protocol */
+    z-index: 0; /* In front of body background */
+    opacity: 0.6 !important; /* Increased visibility as requested */
     pointer-events: none;
     background: radial-gradient(circle at center, rgba(0,255,65,0.05) 0%, transparent 70%);
+}
+
+#smooth-wrapper {
+    position: relative;
+    z-index: 1; /* In front of background animations */
 }
 
 .fused-immersive-bg .concept-engine {
