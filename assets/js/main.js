@@ -11,18 +11,13 @@ const lenis = new Lenis({
     infinite: false,
 });
 
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 // Update GSAP with Lenis
 lenis.on('scroll', ScrollTrigger.update);
 
+// Lenis update loop via GSAP ticker for precision synchronization
 gsap.ticker.add((time)=>{
   lenis.raf(time * 1000);
 });
@@ -372,11 +367,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (mobileMenuBtn && mobileOverlay) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
             lenis.stop();
         });
 
         const closeMenu = () => {
             mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
             lenis.start();
         };
 
@@ -385,9 +382,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         overlayLinks.forEach(link => {
             link.addEventListener('click', () => {
                 closeMenu();
-                // If it's an anchor, handle scroll
                 const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
+                if (href && href.startsWith('#')) {
                     const target = document.querySelector(href);
                     if (target) {
                         setTimeout(() => {
