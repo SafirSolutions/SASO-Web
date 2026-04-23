@@ -2570,8 +2570,14 @@ textarea:focus, input:focus {
         padding: 5rem 6vw;
     }
 
-    h1 { font-size: clamp(2.5rem, 12vw, 4.5rem); line-height: 1.0; }
-    h2 { font-size: clamp(2rem, 10vw, 3.5rem); line-height: 1.1; }
+    h1, h2, h3, h4, h5, h6, .hero-title, .wwd-headline, .service-title, .glitch {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        hyphens: auto;
+    }
+    h1 { font-size: clamp(2.2rem, 10vw, 4rem); line-height: 1.0; }
+    h2 { font-size: clamp(1.8rem, 8vw, 3rem); line-height: 1.1; }
     p { font-size: 1rem; }
 
     /* Layout Stacking */
