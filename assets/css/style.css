@@ -2576,13 +2576,14 @@ textarea:focus, input:focus {
         overflow-wrap: normal !important;
         hyphens: none !important;
     }
-    h1, .hero-title, .service-title { font-size: clamp(1.8rem, 9vw, 3.5rem) !important; line-height: 1.1 !important; }
-    h2, .wwd-headline { font-size: clamp(1.5rem, 8vw, 3rem) !important; line-height: 1.2 !important; }
-    p { font-size: 1rem; }
+    h1, .hero-title, .service-title { font-size: clamp(1.4rem, 8vw, 2.5rem) !important; line-height: 1.1 !important; }
+    h2, .wwd-headline { font-size: clamp(1.2rem, 7vw, 2.2rem) !important; line-height: 1.2 !important; }
+    p { font-size: 0.9rem !important; }
 
     /* Layout Stacking */
     .wwd-grid, .footer-grid, .console-grid, .results-grid {
         grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
     }
 
     /* 1. HERO SECTION MOBILE */
@@ -2590,13 +2591,13 @@ textarea:focus, input:focus {
         height: 100svh; /* use svh for mobile bars */
     }
     .hero-content {
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1.5rem;
         max-width: 100%;
         gap: 1rem;
-        background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6), transparent);
+        background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), transparent);
     }
     .hero-title {
-        font-size: clamp(2.2rem, 10vw, 3.5rem);
+        font-size: clamp(1.6rem, 9vw, 2.8rem) !important;
     }
 
     /* Baseline tweaks */
@@ -2607,10 +2608,10 @@ textarea:focus, input:focus {
     .tag-label { width: fit-content; }
     
     .wwd-bg-text {
-        font-size: 10vw !important;
+        font-size: 7vw !important;
         white-space: normal !important;
         line-height: 1 !important;
-        opacity: 0.5 !important;
+        opacity: 0.2 !important;
         word-wrap: break-word !important;
     }
 
