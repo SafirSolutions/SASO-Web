@@ -2570,17 +2570,26 @@ textarea:focus, input:focus {
         padding: 5rem 6vw;
     }
 
-    h1, h2, h3, h4, h5, h6, .hero-title, .wwd-headline, .service-title, .glitch, .manifesto-title {
+    /* Specialized scaling for Home Page Problematic Titles */
+    .hero-title, .wwd-headline, .service-title, .manifesto-title {
         white-space: normal !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
         word-break: break-word !important;
         hyphens: none !important;
     }
-    h1, .hero-title, .service-title { font-size: clamp(1.2rem, 7vw, 2.2rem) !important; line-height: 1.1 !important; }
-    h2, .wwd-headline { font-size: clamp(1rem, 6vw, 1.8rem) !important; line-height: 1.2 !important; }
-    h3, .manifesto-title { font-size: clamp(0.9rem, 5vw, 1.4rem) !important; line-height: 1.2 !important; }
-    p, .manifesto-lead, .manifesto-detail { font-size: 0.8rem !important; line-height: 1.4 !important; white-space: normal !important; word-wrap: break-word !important; }
+    .hero-title, .service-title { font-size: clamp(1.4rem, 8vw, 2.8rem) !important; line-height: 1.1 !important; }
+    .wwd-headline { font-size: clamp(1.2rem, 7vw, 2.2rem) !important; line-height: 1.2 !important; }
+    .manifesto-title { font-size: clamp(1.1rem, 6vw, 1.6rem) !important; line-height: 1.2 !important; }
+    
+    /* Restore Grandeur to Internal System Pages */
+    .system-dashboard-body .hacker-terminal-title {
+        font-size: clamp(2.5rem, 12vw, 5rem) !important;
+        line-height: 1 !important;
+        white-space: normal !important;
+    }
+
+    p, .manifesto-lead, .manifesto-detail { font-size: 0.9rem !important; line-height: 1.5 !important; }
 
     /* Layout Containment Extreme */
     .content-container { padding: 4rem 4vw !important; }
@@ -2631,6 +2640,13 @@ textarea:focus, input:focus {
 
     /* 9. NAVBAR MOBILE REFINEMENT */
     .nav-links { display: none !important; }
+    
+    /* Exception: Always show EXIT TERMINAL on internal system pages */
+    .system-dashboard-body .nav-links { 
+        display: flex !important; 
+        gap: 10px;
+    }
+    .system-dashboard-body .runtime-counter { display: none; } /* Hide session time on mobile to save space */
     
     .nav-container {
         display: flex;
