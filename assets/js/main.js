@@ -120,6 +120,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
             if (isValid) nextBtn.removeAttribute('disabled');
             else nextBtn.setAttribute('disabled', 'true');
         });
+
+        // Restore navigation for intermediate steps
+        if(!nextBtn.dataset.navListener) {
+            nextBtn.addEventListener('click', () => {
+                if (nextBtn.id !== 'submit-form-btn') {
+                    goToNextStep();
+                }
+            });
+            nextBtn.dataset.navListener = 'true';
+        }
     });
 
     // Independent listener for the final submission to Formspree
