@@ -81,6 +81,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
             const parentStep = button.closest('.form-step');
             if (!parentStep) return;
 
+            // Capture value in hidden input
+            const hiddenInput = parentStep.querySelector('input[type="hidden"]');
+            if (hiddenInput) {
+                hiddenInput.value = button.innerText;
+            }
+
             parentStep.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
             button.classList.add('selected');
 
@@ -115,7 +121,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
 
         if(!nextBtn.dataset.navListener) {
-            nextBtn.addEventListener('click', () => goToNextStep());
+            nextBtn.addEventListener('click', async () => {
+                // If it's the submission button, handle fetch
+                if (nextBtn.id === 'submit-form-btn') {
+                    nextBtn.innerText = "ENVIANDO...";
+                    nextBtn.setAttribute('disabled', 'true');
+
+                    const formData = new FormData();
+                    // Collect all inputs and textareas from the entire container
+                    document.querySelectorAll('.application-container input, .application-container textarea').forEach(input => {
+                        if (input.name) formData.append(input.name, input.value);
+                    });
+
+                    try {
+                        const response = await fetch('https://formspree.io/f/xvzddlvg', {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        });
+
+                        if (response.ok) {
+                            goToNextStep();
+                        } else {
+                            alert("Error al enviar. Por favor intenta de nuevo.");
+                            nextBtn.innerText = "Continuar";
+                            nextBtn.removeAttribute('disabled');
+                        }
+                    } catch (error) {
+                        console.error("Submission error:", error);
+                        alert("Error de conexión. Intenta de nuevo.");
+                        nextBtn.innerText = "Continuar";
+                        nextBtn.removeAttribute('disabled');
+                    }
+                } else {
+                    goToNextStep();
+                }
+            });
             nextBtn.dataset.navListener = 'true';
         }
     });
