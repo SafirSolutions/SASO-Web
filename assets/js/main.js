@@ -110,56 +110,62 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 inputs.forEach(inp => {
                     const val = inp.value.trim();
                     if (val === "") isValid = false;
-                    if (inp.type === 'email' && (!val.includes('@') || !val.includes('.'))) isValid = false;
+                    // Relaxed email validation to prevent blocking users
+                    if (inp.type === 'email' && !val.includes('@')) isValid = false;
                 });
             } else if (textarea) {
-                if (textarea.value.trim().length <= 5) isValid = false;
+                if (textarea.value.trim().length < 2) isValid = false;
             }
 
             if (isValid) nextBtn.removeAttribute('disabled');
             else nextBtn.setAttribute('disabled', 'true');
         });
+    });
 
-        if(!nextBtn.dataset.navListener) {
-            nextBtn.addEventListener('click', async () => {
-                // If it's the submission button, handle fetch
-                if (nextBtn.id === 'submit-form-btn') {
-                    nextBtn.innerText = "ENVIANDO...";
-                    nextBtn.setAttribute('disabled', 'true');
+    // Independent listener for the final submission to Formspree
+    const finalSubmitBtn = document.getElementById('submit-form-btn');
+    if (finalSubmitBtn) {
+        finalSubmitBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            
+            finalSubmitBtn.innerText = "PROCESANDO...";
+            finalSubmitBtn.setAttribute('disabled', 'true');
 
-                    const formData = new FormData();
-                    // Collect all inputs and textareas from the entire container
-                    document.querySelectorAll('.application-container input, .application-container textarea').forEach(input => {
-                        if (input.name) formData.append(input.name, input.value);
-                    });
-
-                    try {
-                        const response = await fetch('https://formspree.io/f/xvzddlvg', {
-                            method: 'POST',
-                            body: formData,
-                            headers: { 'Accept': 'application/json' }
-                        });
-
-                        if (response.ok) {
-                            goToNextStep();
-                        } else {
-                            alert("Error al enviar. Por favor intenta de nuevo.");
-                            nextBtn.innerText = "Continuar";
-                            nextBtn.removeAttribute('disabled');
-                        }
-                    } catch (error) {
-                        console.error("Submission error:", error);
-                        alert("Error de conexión. Intenta de nuevo.");
-                        nextBtn.innerText = "Continuar";
-                        nextBtn.removeAttribute('disabled');
-                    }
-                } else {
-                    goToNextStep();
+            const formData = new FormData();
+            // Collect all named fields from the container
+            document.querySelectorAll('.application-container input, .application-container textarea').forEach(el => {
+                if (el.name) {
+                    formData.append(el.name, el.value);
                 }
             });
-            nextBtn.dataset.navListener = 'true';
-        }
-    });
+
+            // Extra metadata for identification
+            formData.append('_subject', 'NUEVA APLICACIÓN: SASO System');
+
+            try {
+                const response = await fetch('https://formspree.io/f/xvzddlvg', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    goToNextStep(); // Show success step
+                } else {
+                    const errorData = await response.json();
+                    console.error("Formspree Error:", errorData);
+                    alert("Hubo un problema con el servidor de leads. Por favor, intenta de nuevo.");
+                    finalSubmitBtn.innerText = "Continuar";
+                    finalSubmitBtn.removeAttribute('disabled');
+                }
+            } catch (error) {
+                console.error("Connection Error:", error);
+                alert("Error de conexión. Por favor verifica tu red.");
+                finalSubmitBtn.innerText = "Continuar";
+                finalSubmitBtn.removeAttribute('disabled');
+            }
+        });
+    }
 
     updateProgress();
 
