@@ -872,7 +872,8 @@ p {
 }
 
 @media (max-width: 768px) {
-    .m-action { font-size: clamp(2.5rem, 15vw, 5rem); }
+    .m-action { font-size: clamp(1.8rem, 10vw, 3rem); }
+    .m-line { font-size: 0.75rem; letter-spacing: 0.1em; white-space: normal; padding: 0 1rem; }
     .engine-content { gap: 2.5rem; }
 }
 
@@ -2578,9 +2579,9 @@ textarea:focus, input:focus {
     /* Specialized scaling for Home Page Problematic Titles */
     .hero-title, .wwd-headline, .service-title, .manifesto-title {
         white-space: normal !important;
-        word-wrap: break-word !important;
-        overflow-wrap: break-word !important;
-        word-break: break-word !important;
+        word-wrap: normal !important;
+        overflow-wrap: normal !important;
+        word-break: normal !important;
         hyphens: none !important;
     }
     .hero-title, .service-title { font-size: clamp(1.4rem, 8vw, 2.8rem) !important; line-height: 1.1 !important; }
@@ -2831,6 +2832,28 @@ textarea:focus, input:focus {
     .form-step h3 { font-size: 1.5rem; }
     textarea, input { font-size: 1rem; }
     .options-grid.split-col { grid-template-columns: 1fr !important; }
+
+    /* Sub-page Specific Fixes V2 */
+    .service-content .wwd-core {
+        padding: 1.5rem !important;
+        margin-bottom: 3rem !important;
+        box-sizing: border-box !important;
+    }
+    .tag-label, .status-tag, .lvl-tag {
+        white-space: normal !important;
+        font-size: 0.65rem !important;
+        height: auto !important;
+    }
+    .saso-btn {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 1rem 1.5rem !important;
+        font-size: 0.8rem !important;
+        white-space: normal !important;
+    }
+    textarea, input {
+        box-sizing: border-box !important;
+    }
 
     /* Footer MOBILE */
     .footer-col h3 { font-size: 1.5rem; }
