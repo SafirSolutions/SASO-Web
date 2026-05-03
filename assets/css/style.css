@@ -2860,11 +2860,15 @@ textarea:focus, input:focus {
     /* Authority Pages MOBILE */
     .authority-layout {
         margin: 5rem auto !important;
-        padding: 0 1.5rem !important;
+        padding: 0 1rem !important;
+    }
+    .editorial-header {
+        padding-left: 1rem !important;
+        margin-bottom: 2rem !important;
     }
     .authority-title {
-        font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
-        margin-bottom: 2rem !important;
+        font-size: clamp(1.4rem, 6vw, 2rem) !important;
+        margin-bottom: 1.5rem !important;
         white-space: normal !important;
         word-break: normal !important;
         line-height: 1.1 !important;
@@ -2884,7 +2888,7 @@ textarea:focus, input:focus {
     .editorial-hero {
         margin-bottom: 3rem !important;
         height: auto !important;
-        min-height: 35vh !important;
+        min-height: 30vh !important;
     }
 
     /* Footer MOBILE */
