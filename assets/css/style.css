@@ -2586,7 +2586,7 @@ textarea:focus, input:focus {
     }
     .hero-title, .service-title { font-size: clamp(1.4rem, 8vw, 2.8rem) !important; line-height: 1.1 !important; }
     .wwd-headline { font-size: clamp(1.2rem, 7vw, 2.2rem) !important; line-height: 1.2 !important; }
-    .manifesto-title { font-size: clamp(1.1rem, 6vw, 1.6rem) !important; line-height: 1.2 !important; }
+    .manifesto-title { font-size: clamp(0.9rem, 4.5vw, 1.2rem) !important; line-height: 1.2 !important; }
     
     /* Restore Grandeur to Internal System Pages */
     .system-dashboard-body .hacker-terminal-title {
@@ -2602,7 +2602,9 @@ textarea:focus, input:focus {
         width: 100% !important;
         max-width: 100vw !important;
         padding-left: 0 !important;
+        padding-right: 0 !important;
         margin-left: 0 !important;
+        margin-right: 0 !important;
         box-sizing: border-box !important;
         overflow-wrap: break-word !important;
     }
